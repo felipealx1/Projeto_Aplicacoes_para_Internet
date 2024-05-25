@@ -36,16 +36,17 @@ public class ProdutoService implements ProdutoServiceInterface {
 	}
 
 	@Override
-	public Produto update(Produto produto) {
+	public Produto update(Long id, Produto produto) {
 		//encontrei o produto
 		Optional<Produto> upProduto = produtoRepository.findById(produto.getId());
-		
+
 		//se ele existir, atualizar:
 		if(upProduto.isPresent()) {
 			Produto newProduto = upProduto.get();
 			newProduto.setCodigoBarras(produto.getCodigoBarras());
 			newProduto.setNome(produto.getNome());
 			newProduto.setPreco(produto.getPreco());
+			newProduto.setImg(produto.getImg());
 			return produtoRepository.save(newProduto);
 		}
 		return produto;

@@ -27,9 +27,15 @@ public class Produto {
 	
 	@Column(nullable = false)
 	private BigDecimal preco;
+
+	@Column(nullable = false)
+	private String img;
 	
 	//Construtores
 	public Produto() {}
+	public Produto(String img) {
+		this.img = img;
+	}
 	public Produto(Long id, String codigoBarras, BigDecimal preco, String nome) {
 		this.id = id;
 		this.codigoBarras = codigoBarras;
@@ -61,7 +67,15 @@ public class Produto {
 	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
-	
+
+	public String getImg() {
+		return img;
+	}
+
+	public void setImg(String img) {
+		this.img = img;
+	}
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

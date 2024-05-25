@@ -9,6 +9,6 @@ public interface ProdutoServiceInterface {
 	Produto save(Produto produto);
 	Optional<Produto> getById(Long id);
 	List<Produto> getAll();
-	Produto update(Produto produto);
+	Produto update(Long id, Produto produto);
 	void delete(Long id);
 }

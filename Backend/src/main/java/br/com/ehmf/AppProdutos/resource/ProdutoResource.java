@@ -47,10 +47,10 @@ public class ProdutoResource {
 			return ResponseEntity.notFound().build();
 		return ResponseEntity.ok(newProduto);
 	}
-	
-	@PutMapping
-	public ResponseEntity<Produto> update(@RequestBody Produto produto){
-		Produto newProduto = produtoService.update(produto);
+
+	@PutMapping("/{id}")
+	public ResponseEntity<Produto> update(@PathVariable Long id, @RequestBody Produto produto){
+		Produto newProduto = produtoService.update(id, produto);
 		if(newProduto == null)
 			return ResponseEntity.notFound().build();
 		return ResponseEntity.ok(newProduto);
