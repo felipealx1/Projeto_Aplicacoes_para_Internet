@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Produto } from 'src/app/interfaces/produto';
 import { ProdutosService } from 'src/app/services/produtos.service';
 import Swal from 'sweetalert2';
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 export class ProdutosComponent {
   produtos: Produto[] = [];
 
-  constructor(private produtosService: ProdutosService){};
+  constructor(private produtosService: ProdutosService, private router: Router){};
 
   listarProdutos(): void{
     this.produtosService.listarProdutos().subscribe(
@@ -35,15 +36,11 @@ export class ProdutosComponent {
   }
 
   atualizarProduto(produto: Produto): void {
-    this.produtosService.atualizarProduto(produto).subscribe(() => {
-      this.listarProdutos();
-      Swal.fire('Produto atualizado com sucesso', '', 'success');
-    });
+    this.router.navigate(['/produtos/editar', produto.id]);
   }
 
   ngOnInit(){
     this.listarProdutos();
   }
-  
 
 }

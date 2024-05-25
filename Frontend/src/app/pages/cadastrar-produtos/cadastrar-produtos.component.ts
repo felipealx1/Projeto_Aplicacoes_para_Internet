@@ -15,8 +15,8 @@ export class CadastrarProdutosComponent {
     id:new FormControl(0),
     nome: new FormControl('', [Validators.required, Validators.maxLength(200)]),
     codigoBarras: new FormControl('',[Validators.required, Validators.maxLength(1000)]),
-    preco: new FormControl(0)
-
+    preco: new FormControl(0, [Validators.required]),
+    img: new FormControl('', [Validators.required])
   });
 
   enviar(){

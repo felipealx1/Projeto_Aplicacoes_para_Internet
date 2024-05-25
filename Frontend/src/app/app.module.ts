@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { CadastrarProdutosComponent } from './pages/cadastrar-produtos/cadastrar-produtos.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
-import { HttpClientModule } from '@angular/common/http';
+import { ProdutosService } from './services/produtos.service';
+import { AtualizarProdutoComponent } from './pages/atualizar-produto/atualizar-produto.component';
 
 @NgModule({
   declarations: [
@@ -16,17 +17,17 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     CadastrarProdutosComponent,
     HomeComponent,
-    ProdutosComponent
+    ProdutosComponent,
+    AtualizarProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProdutosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

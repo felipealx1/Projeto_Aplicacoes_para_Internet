@@ -2,31 +2,34 @@
 <html lang="en">
 
 <body>
-   <main>
-    <section>
-        <h2>Produtos em Desponíveis</h2>
-        <div class="product">
-            <img src="assets/tenis.jpg" alt="TENIS ADIDDAS">
-            <h3><a href="http://localhost:4200/produtos">TENIS ADIDDAS</a></h3>
-            <p>Estilo atemporal para diversos momentos e combinações.</p>
-        </div>
-
-        <div class="product">
-            <img src="assets/camiseta.jpg" alt="camisa nike">
-            <h3><a href="http://localhost:4200/produtos">CAMISETA NIKE</a></h3>
-            <p>Camiseta NIKE <br>Malha 100% algodão</p>
-        </div>
-
-        <div class="product">
-            <img src="assets/camisa2.jpg" alt="camisa nike">
-            <h3><a href="http://localhost:4200/produtos">CAMISETA NIKE FEMININA</a></h3>
-            <p>Camiseta NIKE <br>Malha 100% algodão</p>
-        </div>
-    </section>
-</main>
+    <main>
+        <h2 style="text-align: center;">Produtos Disponíveis</h2>
+        <table class="table table-bordered table-striped" style="border-radius: 30%;">
+          <thead style="border-radius: 30%;">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome do Produto</th>
+              <th scope="col">Preço</th>
+              <th scope="col">Imagem</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let produto of produtos">
+              <th scope="row">{{ produto.id }}</th>
+              <td>{{ produto.nome }}</td>
+              <td>{{ produto.preco | currency: 'BRL' }}</td>
+              <td>
+                <img [src]="produto.img" alt="{{ produto.nome }}" width="100" height="100" *ngIf="produto.img">
+                <!-- Exibe uma mensagem ou imagem padrão se a URL estiver vazia -->
+                <span *ngIf="!produto.img">Sem imagem</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </main>      
 
 <footer>
-    <p>&copy; 2024 Minha Loja de Produtos. Todos os direitos reservados.</p>
+    <p>&copy; 2024 AC Closet. Todos os direitos reservados.</p>
 </footer>
  
 </body>

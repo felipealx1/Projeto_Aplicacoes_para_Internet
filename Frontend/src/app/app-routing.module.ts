@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarProdutosComponent } from './pages/cadastrar-produtos/cadastrar-produtos.component';
 import { ProdutosComponent } from './pages/produtos/produtos.component';
 import { HomeComponent } from './pages/home/home.component';
+import { AtualizarProdutoComponent } from './pages/atualizar-produto/atualizar-produto.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
     path: 'produtos/cadastrar', component: CadastrarProdutosComponent
   },
   {
-    path: 'produtos/atualizar', component: CadastrarProdutosComponent
+    path: 'produtos/editar/:id', component: AtualizarProdutoComponent
   },
   {
     path: 'produtos/deletar/:id', component: CadastrarProdutosComponent
@@ -26,5 +27,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
+
+  
 })
 export class AppRoutingModule { }
