@@ -21,10 +21,10 @@ Huggo Henrique Santos de Souza RGM:31654762<br>
 <b>Frontend:</b><br>
   <b>-> Angular:</br> Uma biblioteca JavaScript para construção de interfaces de usuário.<br>
   <b>-> HTML/CSS:</br> Para estruturação e estilização do frontend.<hr>
-<b>Backend:</b>
-  Java Spring Boot: Um framework Java para desenvolvimento de aplicações web.
+<b>Backend:</b><br>
+  Java Spring Boot: Um framework Java para desenvolvimento de aplicações web.<br>
   Spring Data JPA: Facilita o acesso e a manipulação de dados em bancos de dados relacionais a partir de aplicativos Java.<hr>
-<b>Banco de Dados:</b>
+<b>Banco de Dados:</b><br>
   MySQL: Um sistema de gerenciamento de banco de dados relacional de código aberto.
 ## ⚙️​Instalação e Execução
 <b>Clone o repositório:</b><br>
