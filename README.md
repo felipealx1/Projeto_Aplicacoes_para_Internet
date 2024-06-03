@@ -15,8 +15,9 @@ Huggo Henrique Santos de Souza RGM:31654762<br>
   -> Visualizar os produtos.<br>
   -> Ver detalhes de cada produto, incluindo nome, descrição e preço.<hr>
 <b>Administradores:</b> <br>
-  -> Cadastrar novos produtos no cardápio.<br>
-  -> Remover produtos do cardápio.<br>
+  -> Cadastrar novos produtos.<br>
+  -> Alterar produtos.<br>
+  -> Remover produtos.<br>
 ## 👨🏾‍💻​🔧​Tecnologias Utilizadas
 <b>Frontend:</b><br>
   <b>-> Angular:</br> Uma biblioteca JavaScript para construção de interfaces de usuário.<br>
